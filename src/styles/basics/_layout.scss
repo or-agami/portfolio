@@ -1,0 +1,10 @@
+.main-layout {
+  &.full {
+    width: 100%;
+  }
+
+  &:not(.full) {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}

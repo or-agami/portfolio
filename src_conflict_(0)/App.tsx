@@ -1,14 +1,11 @@
-import { Header } from './cmps/header';
-import { Hero } from './cmps/hero';
+import React from 'react';
 import logo from './logo.svg';
 import './styles/main.scss';
 
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Hero />
-      <div id='services'>
+      <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
@@ -21,7 +18,7 @@ function App() {
         >
           Learn React
         </a>
-      </div>
+      </header>
     </div>
   );
 }
