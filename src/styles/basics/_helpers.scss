@@ -1,0 +1,28 @@
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex.center,
+.flex-column.center {
+  justify-content: center;
+}
+
+.flex.space-between,
+.flex-column.space-between {
+  justify-content: space-between;
+}
+
+.flex.space-around,
+.flex-column.space-around {
+  justify-content: space-around;
+}
+
+.btn-svg {
+  display: grid;
+  place-items: center;
+}

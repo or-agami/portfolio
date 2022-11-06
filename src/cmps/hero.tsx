@@ -8,6 +8,13 @@ export const Hero = () => {
           <div className="intro-heading">It's Nice To Meet You</div>
           <a className="btn btn-xl js-scroll-trigger" href="#services">Tell Me More</a>
         </div>
+
+        <p className="roboto">Roboto - Or Agami</p>
+        <p className="roboto-light">Roboto-light - Or Agami</p>
+        <p className="roboto-medium">Roboto-medium - Or Agami</p>
+        <p className="roboto-bold">Roboto-bold - Or Agami</p>
+        <p className="roboto-slab">roboto-slab - Or Agami</p>
+        <p className="dancing-script">dancing-script - Or Agami</p>
       </section>
     </div>
   )

@@ -2,12 +2,29 @@
   position: fixed;
   top: 0;
   z-index: 1000;
+  color: white;
+  transition: background-color .4s ease-out;
+  
+  &.scroll {
+    background-color: black;
+  }
 }
 
 .app-header {
   display: flex;
   justify-content: space-between;
-  padding: 15px 25px;
+  padding: 25px 25px;
+  transition: padding .3s ease-out;
+
+  &.scroll {
+    padding: 10px 25px;
+  }
+
+  .navbar-brand {
+    font-family: Dancing-Script, Roboto-Slab, Roboto;
+    font-size: 40px;
+    font-weight: 700;
+  }
 
   .nav-btns {
     .nav-link:not(:last-child) {

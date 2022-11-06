@@ -15,7 +15,7 @@
 
   .intro-text {
     padding-top: 400px;
-    padding-bottom: 400px;
+    // padding-bottom: 400px;
     color: white;
 
     .intro-lead-in {
@@ -23,16 +23,48 @@
       font-style: italic;
       line-height: 22px;
       margin-bottom: 40px;
-      font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: Roboto-Slab, Roboto-Medium, Arial, sans-serif;
     }
 
     .intro-heading {
       font-size: 80px;
       font-weight: 700;
-      line-height: 50px;
+      line-height: 70px;
       margin-bottom: 25px;
-      font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-family: Roboto-Bold, Arial, sans-serif;
       text-transform: uppercase;
     }
+  }
+
+  p {
+    text-transform: capitalize;
+    color: white;
+    font-size: 30px;
+    text-align: end;
+    padding-inline-end: 40px;
+  }
+
+  .roboto {
+    font-family: Roboto;
+  }
+
+  .roboto-light {
+    font-family: Roboto-Light;
+  }
+
+  .roboto-medium {
+    font-family: Roboto-medium;
+  }
+
+  .roboto-bold {
+    font-family: Roboto-bold;
+  }
+
+  .roboto-slab {
+    font-family: Roboto-slab;
+  }
+
+  .dancing-script {
+    font-family: dancing-script;
   }
 }
