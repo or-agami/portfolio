@@ -8,6 +8,7 @@ import { ScrollAnimationTest } from './cmps/scroll-animation-test';
 import { Specialties } from './cmps/specialties';
 import { animateScroll as scroll } from "react-scroll"
 import './styles/main.scss';
+import { ContactMe } from './cmps/contact-me';
 
 function App() {
   useEffect(() => {
@@ -26,6 +27,7 @@ function App() {
       <ScrollAnimationTest />
       <h1>scroll end</h1>
       <AboutMe />
+      <ContactMe />
       <Footer />
     </div>
   );
