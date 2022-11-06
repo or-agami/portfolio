@@ -1,3 +1,9 @@
+.app-header-container {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
 .app-header {
   display: flex;
   justify-content: space-between;
