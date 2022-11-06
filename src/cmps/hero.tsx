@@ -1,12 +1,14 @@
+import { Link } from "react-scroll"
 
 export const Hero = () => {
   return (
-    <div className="main-layout full hero-container">
+    <div className="main-layout full hero-container" id="hero">
       <section className="main-layout hero">
         <div className="intro-text">
           <div className="intro-lead-in">Welcome To my Portfolio</div>
           <div className="intro-heading">It's Nice To Meet You</div>
-          <a className="btn btn-xl js-scroll-trigger" href="#services">Tell Me More</a>
+          {/* <a className="btn" href="#services">Tell Me More</a> */}
+          <Link className="btn" smooth offset={-68} to="specialties">Tell Me More</Link>
         </div>
 
         <p className="roboto">Roboto - Or Agami</p>

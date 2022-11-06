@@ -7,9 +7,14 @@
   flex-direction: column;
 }
 
-.flex.center,
-.flex-column.center {
+.flex.justify-center,
+.flex-column.justify-center {
   justify-content: center;
+}
+
+.flex.align-center,
+.flex-column.align-center {
+  align-items: center;
 }
 
 .flex.space-between,

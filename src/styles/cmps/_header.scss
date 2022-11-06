@@ -4,15 +4,13 @@
   z-index: 1000;
   color: white;
   transition: background-color .4s ease-out;
-  
+
   &.scroll {
     background-color: black;
   }
 }
 
 .app-header {
-  display: flex;
-  justify-content: space-between;
   padding: 25px 25px;
   transition: padding .3s ease-out;
 
@@ -27,8 +25,22 @@
   }
 
   .nav-btns {
-    .nav-link:not(:last-child) {
-      margin-inline-end: 10px;
+    gap: 10px;
+  }
+
+  .nav-link {
+    cursor: pointer;
+
+    &:hover {
+      color: pink;
+    }
+
+    &.active {
+      color: orange;
     }
   }
+
+  // .nav-link:not(:last-child) {
+  //   margin-inline-end: 10px;
+  // }
 }

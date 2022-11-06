@@ -1,0 +1,9 @@
+.portfolio {
+  text-align: center;
+  gap: 20px;
+
+  .project-list {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+}
