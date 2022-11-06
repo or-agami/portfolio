@@ -2,7 +2,8 @@ import { useInView } from 'react-intersection-observer';
 import logo from '../logo.svg';
 
 export const ScrollAnimationTest = () => {
-  const { ref, inView, entry } = useInView({
+  // const { ref, inView, entry } = useInView({
+  const { ref, inView} = useInView({
     /* Optional options */
     threshold: 0,
   });

@@ -4,7 +4,8 @@ export const AboutMe = () => {
     <div className="main-layout full about-me-container" id="about-me">
       <section className="about-me">
         <div className="team-member">
-          {/* <img className="mx-auto rounded-circle" src="img/or-agami.jpg" alt=""> */}
+          <img src="../../assets/img/or-agami.jpg" alt="" />
+          <img className="mx-auto rounded-circle" src="../assets/img/or-agami.jpg" alt=""/>
           <h4>Or Agami</h4>
           <p className="text-muted">Full-Stack Developer</p>
           <p className="large text-muted  about-description">
