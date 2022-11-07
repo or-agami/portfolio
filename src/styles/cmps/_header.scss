@@ -3,7 +3,7 @@
   top: 0;
   z-index: 1000;
   color: white;
-  transition: background-color .4s ease-out;
+  transition: background-color .2s ease-out;
 
   &.scroll {
     background-color: var(--clr-gray);
@@ -14,9 +14,13 @@
 .app-header {
   padding: 25px 35px;
   transition: padding .3s ease-out;
+  &.main-layout {
+    padding-inline: 0;
+  }
 
   &.scroll {
-    padding: 10px 25px;
+    // padding: 10px 25px;
+    padding: 10px 15px;
 
     .svg-icon #right * {
       fill: var(--clr-main);

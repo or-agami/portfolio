@@ -1,13 +1,13 @@
+import './styles/main.scss';
 import { useEffect } from 'react';
 import { AboutMe } from './cmps/about-me';
 import { Footer } from './cmps/foolter';
 import { Header } from './cmps/header';
 import { Hero } from './cmps/hero';
 import { Portfolio } from './cmps/portfolio';
-import { ScrollAnimationTest } from './cmps/scroll-animation-test';
+// import { ScrollAnimationTest } from './cmps/scroll-animation-test';
 import { Specialties } from './cmps/specialties';
 import { animateScroll as scroll } from "react-scroll"
-import './styles/main.scss';
 import { ContactMe } from './cmps/contact-me';
 
 function App() {

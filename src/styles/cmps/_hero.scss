@@ -5,65 +5,152 @@
 }
 
 .hero {
-  text-align: center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
   height: 100vh;
+  color: white;
 
-  .intro-text {
-    padding-top: 400px;
-    // padding-bottom: 400px;
-    color: white;
+  .intro {
+    padding-top: 100px;
+    height: 100%;
+    position: relative;
 
-    .intro-lead-in {
-      font-size: 30px;
-      font-style: italic;
-      line-height: 22px;
-      margin-bottom: 40px;
-      font-family: Roboto-Slab, Roboto-Medium, Arial, sans-serif;
-    }
-
-    .intro-heading {
-      font-size: 80px;
-      font-weight: 700;
-      line-height: 70px;
-      margin-bottom: 25px;
-      font-family: Roboto-Bold, Arial, sans-serif;
+    .hello {
+      font-size: 200px;
+      font-family: Roboto-Bold;
       text-transform: uppercase;
+      color: #ffffff18;
+      letter-spacing: -10px;
+
+      .highlight-text {
+        color: var(--clr-main);
+      }
     }
   }
 
-  p {
-    text-transform: capitalize;
-    color: white;
-    font-size: 30px;
-    text-align: end;
-    padding-inline-end: 40px;
+  .about {
+    h2 {
+      font-size: 60px;
+      font-family: Roboto-Medium;
+    }
+
+    .highlight-text {
+      color: var(--clr-main);
+      margin-bottom: 50px;
+
+      &::after {
+        content: '';
+        display: block;
+        position: relative;
+        translate: 0 20px;
+        width: 160px;
+        height: 6px;
+        border-radius: 2em;
+        background-color: var(--clr-main);
+      }
+    }
+
+    .job-description {
+      width: 300px;
+      font-family: Roboto-Light;
+      font-size: 18px;
+      letter-spacing: .5px;
+    }
   }
 
-  .roboto {
-    font-family: Roboto;
-  }
+  .follow-me {
+    position: absolute;
+    z-index: 10;
+    top: 100px;
+    right: 0;
+    gap: 20px;
 
-  .roboto-light {
-    font-family: Roboto-Light;
-  }
+    .title {
+      writing-mode: sideways-rl;
+    }
 
-  .roboto-medium {
-    font-family: Roboto-medium;
-  }
+    .spacer {
+      width: 6px;
+      height: 80px;
+      border-radius: 2em;
+      background-color: var(--clr-main);
+    }
 
-  .roboto-bold {
-    font-family: Roboto-bold;
-  }
-
-  .roboto-slab {
-    font-family: Roboto-slab;
-  }
-
-  .dancing-script {
-    font-family: dancing-script;
+    .svg-link {
+      font-size: 20px;
+    }
   }
 }
+
+.overflow-container {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  border-top: 1px solid var(--clr-main);
+  background-color: var(--clr-secondary);
+}
+
+.overflow {
+  align-items: center;
+  height: 350px;
+
+  .quote-container {
+    .author {
+      color: var(--clr-txt-secondary);
+      font-family: Roboto-Light;
+      font-weight: 300;
+      margin-bottom: 6px;
+    }
+
+    .quote {
+      color: var(--clr-txt-main);
+      font-family: Roboto-Slab;
+      font-weight: 600;
+    }
+  }
+
+  .img-container {
+    position: relative;
+    translate: 0 -55%;
+
+    .hero-img {
+      width: 500px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      border-bottom-right-radius: 80px;
+      width: 300px;
+      height: 300px;
+      translate: 101px 60%;
+      box-shadow: 1px 1px 0px 0px var(--clr-main);
+      outline-offset: 40px;
+      outline: 1px solid var(--clr-main);
+      rotate: 45deg;
+      z-index: -1;
+    }
+  }
+}
+
+// .intro-text {
+//   padding-top: 400px;
+//   // padding-bottom: 400px;
+//   color: white;
+
+//   .intro-lead-in {
+//     font-size: 30px;
+//     font-style: italic;
+//     line-height: 22px;
+//     margin-bottom: 40px;
+//     font-family: Roboto-Slab, Roboto-Medium, Arial, sans-serif;
+//   }
+
+//   .intro-heading {
+//     font-size: 80px;
+//     font-weight: 700;
+//     line-height: 70px;
+//     margin-bottom: 25px;
+//     font-family: Roboto-Bold, Arial, sans-serif;
+//     text-transform: uppercase;
+//   }
+// }
