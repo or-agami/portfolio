@@ -32,14 +32,14 @@
 .specialties-list {
   .specialty {
     position: relative;
-    transition: opacity .5s ease-out, translate .5s ease-out;
+    transition: opacity 1.8s ease-out, translate .5s ease-out;
 
     .title {
       transition: opacity .5s ease-out, translate .5s ease-out;
     }
 
     .description {
-      transition: opacity .5s ease-out, translate .5s ease-out;
+      transition: opacity .6s ease-out, translate .5s ease-out;
     }
   }
 
@@ -62,7 +62,7 @@
 
   &.invisible {
     .specialty {
-      // translate: -20px 0;
+      transition: opacity .3s ease-out, translate .5s ease-out;
       opacity: 0;
     }
 
@@ -72,7 +72,8 @@
     }
 
     .description {
-      translate: -20px 0;
+      // translate: -20px 0;
+      translate: 0 10px;
       opacity: 0;
     }
   }

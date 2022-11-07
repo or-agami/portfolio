@@ -6,22 +6,38 @@
   transition: background-color .4s ease-out;
 
   &.scroll {
-    background-color: black;
+    background-color: var(--clr-gray);
+    box-shadow: 0px 0px 16px 6px rgba(0,0,0,0.52);
   }
 }
 
 .app-header {
-  padding: 25px 25px;
+  padding: 25px 35px;
   transition: padding .3s ease-out;
 
   &.scroll {
     padding: 10px 25px;
+
+    .svg-icon #right * {
+      fill: var(--clr-main);
+    }
   }
 
-  .navbar-brand {
+  .logo-btn {
     font-family: Dancing-Script, Roboto-Slab, Roboto;
-    font-size: 40px;
+    font-size: 16px;
     font-weight: 700;
+
+    .svg-icon {
+      width: 32px;
+    }
+
+
+    &:hover {
+      svg * {
+        fill: var(--clr-main);
+      }
+    }
   }
 
   .nav-btns {
@@ -30,14 +46,13 @@
 
   .nav-link {
     cursor: pointer;
+    transition: color .3s ease-out;
 
-    &:hover {
-      color: pink;
-    }
-
+    &:hover,
     &.active {
-      color: orange;
+      color: var(--clr-main);
     }
+
   }
 
   // .nav-link:not(:last-child) {

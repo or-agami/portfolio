@@ -39,3 +39,7 @@
   font-size: 16px;
   color: #3a3a3a;
 }
+
+@mixin nav-hover {
+  color: var(--clr-main)
+}

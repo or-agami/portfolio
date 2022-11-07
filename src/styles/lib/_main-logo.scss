@@ -1,0 +1,10 @@
+.agami-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  // transition: fill 1.5s ease-out;
+  .svg-icon * {
+    transition: fill .3s ease-out;
+  }
+}
