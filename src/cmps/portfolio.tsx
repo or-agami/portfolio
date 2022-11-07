@@ -9,8 +9,8 @@ export const Portfolio = () => {
   const [projectOpen, setProject] = useState<Project | null>(null)
 
   const { ref, inView } = useInView({
-    threshold: 0.2,
-  });
+    threshold: 0.6,
+  })
 
   // useEffect(() => {
   //   (projectOpen) ?
@@ -22,9 +22,9 @@ export const Portfolio = () => {
     <>
       <div className="main-layout full portfolio-container" id="portfolio">
         <section className="main-layout flex-column align-center portfolio">
-          <header>
-            <h1>portfolio</h1>
-            <h3>Preview of recent projects</h3>
+          <header className="header">
+            <h1 className="main-title">portfolio</h1>
+            <h3 className="sub-title">Preview of recent projects</h3>
           </header>
           <div className={`flex project-list ${inView ? 'visible' : 'invisible'}`} ref={ref}>
             {projects.map((project: Project) =>

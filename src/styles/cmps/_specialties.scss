@@ -1,5 +1,79 @@
+.specialties-container {
+  background-color: white;
+}
+
 .specialties {
-  header {
-    font-size: 80px;
+  padding-block-start: 100px;
+  padding-block-end: 150px;
+
+  .main-title {
+    @include section-title;
+    margin-bottom: 60px;
+  }
+
+  .specialties-list {
+
+    .specialty {
+      text-align: center;
+
+      .icon {
+        font-size: 80px;
+      }
+
+      .title {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+
+//? Animation
+.specialties-list {
+  .specialty {
+    position: relative;
+    transition: opacity .5s ease-out, translate .5s ease-out;
+
+    .title {
+      transition: opacity .5s ease-out, translate .5s ease-out;
+    }
+
+    .description {
+      transition: opacity .5s ease-out, translate .5s ease-out;
+    }
+  }
+
+
+  &.visible {
+    @for $i from 1 through 3 {
+      .specialty:nth-child(#{$i}) {
+        transition-delay: calc(0.4s + ($i - 1) * .6s);
+
+        .title {
+          transition-delay: calc(0.6s + ($i - 1) * .6s);
+        }
+
+        .description {
+          transition-delay: calc(1s + ($i - 1) * .6s);
+        }
+      }
+    }
+  }
+
+  &.invisible {
+    .specialty {
+      // translate: -20px 0;
+      opacity: 0;
+    }
+
+    .title {
+      translate: -20px 0;
+      opacity: 0;
+    }
+
+    .description {
+      translate: -20px 0;
+      opacity: 0;
+    }
   }
 }

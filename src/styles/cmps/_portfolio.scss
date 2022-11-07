@@ -1,6 +1,19 @@
 .portfolio {
   text-align: center;
   gap: 20px;
+  padding-block: 150px;
+
+  .header {
+    margin-bottom: 60px;
+
+    .main-title {
+      @include section-title;
+    }
+
+    .sub-title {
+      @include section-sub-title;
+    }
+  }
 
   .project-list {
     gap: 20px;
@@ -17,6 +30,7 @@
   }
 }
 
+//? Animation
 .project-list {
   .project-preview {
     position: relative;

@@ -23,9 +23,7 @@ function App() {
       <Hero />
       <Specialties />
       <Portfolio />
-      <h1>scroll start</h1>
-      <ScrollAnimationTest />
-      <h1>scroll end</h1>
+      {/* <ScrollAnimationTest /> */}
       <AboutMe />
       <ContactMe />
       <Footer />

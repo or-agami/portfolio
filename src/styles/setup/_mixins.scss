@@ -1,0 +1,41 @@
+//? Media Queries Breakpoint
+
+@mixin for-mobile-layout {
+  @media (max-width: $break-narrow) {
+    @content;
+  }
+}
+
+@mixin for-narrow-layout {
+  @media (min-width: $break-narrow) {
+    @content;
+  }
+}
+
+@mixin for-normal-layout {
+  @media (min-width: $break-normal) {
+    @content;
+  }
+}
+
+@mixin for-wide-layout {
+  @media (min-width: $break-wide) {
+    @content;
+  }
+}
+
+
+//? Helpers Mixins
+
+@mixin section-title {
+  font-size: 60px;
+  text-transform: uppercase;
+  font-family: Roboto-Bold;
+  letter-spacing: -5px;
+}
+
+@mixin section-sub-title {
+  font-family: Roboto-Light;
+  font-size: 16px;
+  color: #3a3a3a;
+}

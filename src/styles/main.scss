@@ -1,6 +1,8 @@
 /* || Setup || */
 @import './setup/variables';
 @import './setup/typography';
+@import './setup/mixins';
+@import './setup/functions';
 
 
 /* || Basic || */
@@ -16,6 +18,7 @@
 @import './cmps/specialties';
 @import './cmps/portfolio';
 @import './cmps/project-details';
+@import './cmps/about-me';
 
 
 /* || View || */
