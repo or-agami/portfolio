@@ -1,11 +1,13 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.4605e3c2.css",
-    "main.js": "/portfolio/static/js/main.fd44d596.js",
+    "main.css": "/portfolio/static/css/main.d3834ad5.css",
+    "main.js": "/portfolio/static/js/main.0025a06a.js",
     "static/js/787.28cb0dcd.chunk.js": "/portfolio/static/js/787.28cb0dcd.chunk.js",
+    "static/media/or-agami.jpg": "/portfolio/static/media/or-agami.665e299638588ccabd2a.jpg",
+    "static/media/hero-img.png": "/portfolio/static/media/hero-img.b776d686025422a22ac0.png",
+    "static/media/hero-bg.png": "/portfolio/static/media/hero-bg.d20d81c10c4247564b9b.png",
     "static/media/ergogami-thumbnail.png": "/portfolio/static/media/ergogami-thumbnail.88d08308c0ea787c37f7.png",
     "static/media/RobotoSlab.ttf": "/portfolio/static/media/RobotoSlab.24c71ebd53c3ed50accb.ttf",
-    "static/media/header-bg.jpg": "/portfolio/static/media/header-bg.050c4ecaaa8ce224a5ca.jpg",
     "static/media/meme-generator-thumbnail.png": "/portfolio/static/media/meme-generator-thumbnail.596f7c64ac4aa4a16699.png",
     "static/media/Roboto-Medium.ttf": "/portfolio/static/media/Roboto-Medium.7c8d04cd831df3033c8a.ttf",
     "static/media/Roboto-Regular.ttf": "/portfolio/static/media/Roboto-Regular.fc2b5060f7accec5cf74.ttf",
@@ -17,14 +19,14 @@
     "static/media/touch-nums-thumbnail.png": "/portfolio/static/media/touch-nums-thumbnail.c3a431b3f9b659253687.png",
     "static/media/minesweeper-thumbnail.png": "/portfolio/static/media/minesweeper-thumbnail.d80184f9983624fe55e7.png",
     "static/media/or-agami-resized-logo.svg": "/portfolio/static/media/or-agami-resized-logo.81281551974722235a0db06cf2e37388.svg",
-    "static/media/logo.svg": "/portfolio/static/media/logo.103b5fa18196d5665a7e12318285c916.svg",
     "index.html": "/portfolio/index.html",
-    "main.4605e3c2.css.map": "/portfolio/static/css/main.4605e3c2.css.map",
-    "main.fd44d596.js.map": "/portfolio/static/js/main.fd44d596.js.map",
+    "static/media/agami-logo.svg": "/portfolio/static/media/agami-logo.58396eed2fcd9e5c48dcd1385f63ebcb.svg",
+    "main.d3834ad5.css.map": "/portfolio/static/css/main.d3834ad5.css.map",
+    "main.0025a06a.js.map": "/portfolio/static/js/main.0025a06a.js.map",
     "787.28cb0dcd.chunk.js.map": "/portfolio/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4605e3c2.css",
-    "static/js/main.fd44d596.js"
+    "static/css/main.d3834ad5.css",
+    "static/js/main.0025a06a.js"
   ]
 }
