@@ -1,4 +1,4 @@
-import { BsLaptop } from "react-icons/bs"
+import { BsFillLightningFill, BsLaptop, BsStack } from "react-icons/bs"
 import { useInView } from "react-intersection-observer";
 
 export const Specialties = () => {
@@ -11,9 +11,9 @@ export const Specialties = () => {
     <div className="main-layout full specialties-container" id="specialties">
       <section className="main-layout flex-column align-center specialties">
         <h1 className="main-title">specialties</h1>
-        <div className={`flex justify-center specialties-list ${inView ? 'visible' : 'invisible'}`} ref={ref}>
+        <div className={`flex specialties-list ${inView ? 'visible' : 'invisible'}`} ref={ref}>
           {specialties.map((specialty, idx) =>
-            <article key={idx} className="flex-column align-center specialty">
+            <article key={idx} className="flex-column justify-center align-center specialty">
               <div className="icon">{specialty.img}</div>
               <h1 className="title">
                 {specialty.title}
@@ -37,18 +37,18 @@ export const Specialties = () => {
 
 const specialties = [
   {
-    img: <BsLaptop />,
-    title: 'Responsive Design',
-    description: 'Full Stack development with responsive design in mind, one website for all devices without compromise',
+    img: <BsFillLightningFill />,
+    title: 'Blazing Fast',
+    description: 'Optimization, performance and great UX/UI is high priority for me',
   },
   {
     img: <BsLaptop />,
     title: 'Responsive Design',
-    description: 'Full Stack development with responsive design in mind, one website for all devices without compromise',
+    description: 'Development with responsive design in mind, one code for all devices',
   },
   {
-    img: <BsLaptop />,
-    title: 'Responsive Design',
-    description: 'Full Stack development with responsive design in mind, one website for all devices without compromise',
+    img: <BsStack />,
+    title: 'Full Stack',
+    description: 'From backend to frontend, Easy and optimized app ready for deployment',
   },
 ]

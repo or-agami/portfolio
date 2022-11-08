@@ -42,3 +42,34 @@
 @mixin nav-hover {
   color: var(--clr-main)
 }
+
+
+//? Keyframe Animations
+
+@mixin float-animation {
+  @keyframes float {
+    0% {
+      translate: 0 2%;
+    }
+
+    50% {
+      translate: 0 -2%;
+    }
+
+    100% {
+      translate: 0 2%;
+    }
+  }
+}
+
+@mixin loading-bar-animation {
+  @keyframes loading-bar {
+    from {
+      translate: -50% 0;
+    }
+
+    to {
+      translate: 0 0;
+    }
+  }
+}

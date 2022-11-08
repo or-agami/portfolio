@@ -12,11 +12,8 @@
 }
 
 .app-header {
-  padding: 25px 35px;
+  padding: 25px 45px;
   transition: padding .3s ease-out;
-  &.main-layout {
-    padding-inline: 0;
-  }
 
   &.scroll {
     // padding: 10px 25px;

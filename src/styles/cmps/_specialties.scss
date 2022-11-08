@@ -1,6 +1,4 @@
-.specialties-container {
-  background-color: white;
-}
+.specialties-container {}
 
 .specialties {
   padding-block-start: 100px;
@@ -30,8 +28,16 @@
 
 //? Animation
 .specialties-list {
+  // gap: 20px;
+  width: 100%;
+  justify-content: space-evenly;
+
   .specialty {
     position: relative;
+    aspect-ratio: 1;
+    width: 250px;
+    border-radius: 2em;
+    background-color: var(--clr-secondary);
     transition: opacity 1.8s ease-out, translate .5s ease-out;
 
     .title {
@@ -39,7 +45,10 @@
     }
 
     .description {
+      width: 80%;
       transition: opacity .6s ease-out, translate .5s ease-out;
+      color: var(--clr-txt-secondary);
+      font-family: Roboto-Light;
     }
   }
 
@@ -58,6 +67,9 @@
         }
       }
     }
+
+    @include float-animation;
+    @include loading-bar-animation;
   }
 
   &.invisible {
