@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { useInView } from "react-intersection-observer";
-import { Project, projects } from "../data/project"
+import { Project, projects } from "../data/project.const"
+import { ProjectSwiper } from "./project-swiper";
 import { ProjectDetails } from "./project-details";
 
 
@@ -21,16 +22,17 @@ export const Portfolio = () => {
   return (
     <>
       <div className="main-layout full portfolio-container" id="portfolio">
-        <section className="main-layout flex-column align-center portfolio">
+        <section className="main-layout flex-column portfolio">
           <header className="header">
             <h1 className="main-title">portfolio</h1>
             <h3 className="sub-title">Preview of recent projects</h3>
           </header>
-          <div className={`flex project-list ${inView ? 'visible' : 'invisible'}`} ref={ref}>
+          {/* <div className={`flex project-list ${inView ? 'visible' : 'invisible'}`} ref={ref}>
             {projects.map((project: Project) =>
               <ProjectPreview key={project.id} project={project} onSetProject={setProject} />
             )}
-          </div>
+          </div> */}
+          <ProjectSwiper />
         </section>
       </div>
       {projectOpen && <ProjectDetails project={projectOpen} onClose={() => setProject(null)} />}

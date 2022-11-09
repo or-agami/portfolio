@@ -6,7 +6,9 @@ export interface Project {
   url: string;
   publishedAt: string;
   category: string;
-  labels: string[];
+  tags: string[];
+  stack?: Array<'HTML' | 'Vanilla JS' | 'React' | 'Svelte' | 'Angular' | 'Vue' | 'NodeJS' | 'ExpressJS' | 'MongoDB' | 'Local Storage'>;
+  // languages?: Array<'JavaScript' | 'C++' | 'DeviceTree'>
 }
 
 export const projects: Project[] = [
@@ -18,7 +20,8 @@ export const projects: Project[] = [
     url: 'https://agenda.agami-network.com',
     publishedAt: 'Sep 2022',
     category: 'Tool',
-    labels: ['Organize', 'Productivity tool', 'Management']
+    tags: ['Organize', 'Productivity tool', 'Management'],
+    stack: ['React', 'NodeJS', 'ExpressJS', 'MongoDB'],
   },
   {
     id: 'ergogami',
@@ -28,7 +31,7 @@ export const projects: Project[] = [
     url: 'https://github.com/or-agami/Ergogami',
     publishedAt: 'Jule 2022',
     category: 'Hardware',
-    labels: ['Electronics', 'Keyboard']
+    tags: ['Electronics', 'Keyboard'],
   },
   {
     id: 'meme-generator',
@@ -38,7 +41,8 @@ export const projects: Project[] = [
     url: 'https://or-agami.github.io/meme-generator-ca/',
     publishedAt: 'Aug 2022',
     category: 'Game',
-    labels: ['Game']
+    tags: ['Game', 'Canvas', 'Meme'],
+    stack: ['HTML', 'Vanilla JS', 'Local Storage'],
   },
   {
     id: 'minesweeper',
@@ -48,16 +52,18 @@ export const projects: Project[] = [
     url: 'https://or-agami.github.io/Minesweeper-CA/',
     publishedAt: 'Jule 2022',
     category: 'Game',
-    labels: ['Matrixes', 'Game']
+    tags: ['Matrixes', 'Game'],
+    stack: ['HTML', 'Vanilla JS'],
   },
-  {
-    id: 'touch-nums',
-    name: 'Touch Nums',
-    title: 'Try your best to press the nums by order',
-    desc: 'You have to touch numbers quickly. The best score is the least time to touch all numbers in order.',
-    url: 'https://or-agami.github.io/touch-nums-ca/',
-    publishedAt: 'Jule 2022',
-    category: 'Game',
-    labels: ['Matrixes', 'Game']
-  },
+  // {
+  //   id: 'touch-nums',
+  //   name: 'Touch Nums',
+  //   title: 'Try your best to press the nums by order',
+  //   desc: 'You have to touch numbers quickly. The best score is the least time to touch all numbers in order.',
+  //   url: 'https://or-agami.github.io/touch-nums-ca/',
+  //   publishedAt: 'Jule 2022',
+  //   category: 'Game',
+  //   tags: ['Matrixes', 'Game'],
+  //   stack: ['HTML', 'Vanilla JS'],
+  // },
 ]

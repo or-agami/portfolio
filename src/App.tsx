@@ -13,7 +13,7 @@ import { ContactMe } from './cmps/contact-me';
 function App() {
   useEffect(() => {
     if (window.location.hash && window.scrollY < 10) {
-      setTimeout(() => { scroll.scrollMore(-68) }, 100)
+      setTimeout(() => { scroll.scrollMore(-60) }, 100)
     }
   })
   // }, [])

@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from "react"
-import { Project } from "../data/project"
+import { Project } from "../data/project.const"
 
 export const ProjectDetails = ({ project, onClose }: { project: Project, onClose: Dispatch<SetStateAction<null>> }) => {
 

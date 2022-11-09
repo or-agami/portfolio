@@ -1,25 +1,77 @@
-.specialties-container {}
+.specialties-container {
+  background-image: url(../../assets//img/specialties-bg.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
 
 .specialties {
-  padding-block-start: 100px;
-  padding-block-end: 150px;
+  padding-block-start: 50px;
+  padding-block-end: 80px;
 
   .main-title {
     @include section-title;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
   }
 
   .specialties-list {
+    // gap: 20px;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-bottom: 60px;
 
     .specialty {
       text-align: center;
+      position: relative;
+      aspect-ratio: 1;
+      width: 250px;
+      border-radius: 2em;
+      background-color: var(--clr-secondary);
 
       .icon {
         font-size: 80px;
+
+        svg * {
+          fill: var(--clr-main);
+        }
       }
 
       .title {
         margin-bottom: 10px;
+      }
+
+      .description {
+        width: 80%;
+        color: var(--clr-txt-secondary);
+        font-family: Roboto-Light;
+      }
+    }
+  }
+
+  .skill-list {
+    gap: 10px;
+
+    &.invisible {
+      .score {
+        width: 0px !important;
+      }
+    }
+
+    .skill {
+      justify-content: space-between;
+      gap: 30px;
+      position: relative;
+
+      .score-container {
+        height: 6px;
+        width: 200px;
+        background-color: var(--clr-txt-secondary);
+        border-radius: 2em;
+      }
+
+      .score {
+        background-color: var(--clr-main);
+        height: 100%;
+        border-radius: 2em;
       }
     }
   }
@@ -28,42 +80,32 @@
 
 //? Animation
 .specialties-list {
-  // gap: 20px;
-  width: 100%;
-  justify-content: space-evenly;
-
   .specialty {
-    position: relative;
-    aspect-ratio: 1;
-    width: 250px;
-    border-radius: 2em;
-    background-color: var(--clr-secondary);
-    transition: opacity 1.8s ease-out, translate .5s ease-out;
+    transition: opacity .8s ease-out, translate .5s ease-out;
 
     .title {
       transition: opacity .5s ease-out, translate .5s ease-out;
     }
 
     .description {
-      width: 80%;
       transition: opacity .6s ease-out, translate .5s ease-out;
-      color: var(--clr-txt-secondary);
-      font-family: Roboto-Light;
     }
   }
-
 
   &.visible {
     @for $i from 1 through 3 {
       .specialty:nth-child(#{$i}) {
-        transition-delay: calc(0.4s + ($i - 1) * .6s);
+        // transition-delay: calc(0.4s + ($i - 1) * .6s);
+        transition-delay: calc(0.2s + ($i - 1) * .6s);
 
         .title {
-          transition-delay: calc(0.6s + ($i - 1) * .6s);
+          // transition-delay: calc(0.6s + ($i - 1) * .6s);
+          transition-delay: calc(0.4s + ($i - 1) * .6s);
         }
 
         .description {
-          transition-delay: calc(1s + ($i - 1) * .6s);
+          // transition-delay: calc(1s + ($i - 1) * .6s);
+          transition-delay: calc(.6s + ($i - 1) * .6s);
         }
       }
     }
@@ -91,33 +133,52 @@
   }
 }
 
-.font-test {
-  text-transform: capitalize;
-  font-size: 30px;
-  text-align: end;
-  padding-inline-end: 40px;
+.skill-list {
+  &.invisible {
+    .score {
+      width: 0px !important;
+    }
+  }
+
+  .skill {
+
+    .score-container {
+      border-radius: 2em;
+    }
+
+    .score {
+      transition: width 2s ease-out;
+    }
+  }
 }
 
-.roboto {
-  font-family: Roboto;
-}
+// .font-test {
+//   text-transform: capitalize;
+//   font-size: 30px;
+//   text-align: end;
+//   padding-inline-end: 40px;
+// }
 
-.roboto-light {
-  font-family: Roboto-Light;
-}
+// .roboto {
+//   font-family: Roboto;
+// }
 
-.roboto-medium {
-  font-family: Roboto-medium;
-}
+// .roboto-light {
+//   font-family: Roboto-Light;
+// }
 
-.roboto-bold {
-  font-family: Roboto-bold;
-}
+// .roboto-medium {
+//   font-family: Roboto-medium;
+// }
 
-.roboto-slab {
-  font-family: Roboto-slab;
-}
+// .roboto-bold {
+//   font-family: Roboto-bold;
+// }
 
-.dancing-script {
-  font-family: dancing-script;
-}
+// .roboto-slab {
+//   font-family: Roboto-slab;
+// }
+
+// .dancing-script {
+//   font-family: dancing-script;
+// }
