@@ -24,6 +24,12 @@ function App() {
       <Specialties />
       <Portfolio />
       {/* <ScrollAnimationTest /> */}
+      <p className="font-test roboto">Roboto - Or Agami</p>
+      <p className="font-test roboto-light">Roboto-light - Or Agami</p>
+      <p className="font-test roboto-medium">Roboto-medium - Or Agami</p>
+      <p className="font-test roboto-bold">Roboto-bold - Or Agami</p>
+      <p className="font-test roboto-slab">roboto-slab - Or Agami</p>
+      <p className="font-test dancing-script">dancing-script - Or Agami</p>
       <AboutMe />
       <ContactMe />
       <Footer />

@@ -9,7 +9,7 @@ export const ProjectDetails = ({ project, onClose }: { project: Project, onClose
         <main className="main-details">
           <button onClick={() => onClose(null)}>X</button>
           <h1>Project Details Works!</h1>
-          <h1>{project.name}</h1>
+          <h1>{project.title}</h1>
         </main>
       </article>
     </div>

@@ -44,7 +44,7 @@ const ProjectPreview = ({ project, onSetProject }: { project: Project, onSetProj
   return (
     <article key={project.id} className="project-preview" onClick={() => onSetProject(project)}>
       <img src={require(`../assets/img/portfolio/${project.id}-thumbnail.png`)} alt="" />
-      <h1>{project.name}</h1>
+      <h1>{project.title}</h1>
       <h4>{project.category}</h4>
     </article>
   )
