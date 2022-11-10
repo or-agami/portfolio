@@ -1,10 +1,10 @@
 import { ReactComponent as AgamiLogo } from "../assets/icon/agami-logo.svg"
 
-export const MainLogo = () => {
+export const MainLogo = ({hideName}: {hideName?: boolean}) => {
   return (
     <div className="agami-logo">
       <AgamiLogo className="svg-icon" />
-      <h1>Or Agami</h1>
+      {!hideName && <h1>Or Agami</h1>}
     </div>
   )
 }

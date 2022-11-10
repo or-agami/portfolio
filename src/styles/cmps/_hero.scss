@@ -1,133 +1,137 @@
 .hero-container {
+  position: relative;
   background-image: url("../../assets/img/hero-bg.png");
   background-attachment: scroll;
   background-position: center center;
-}
 
-.hero {
-  height: 100vh;
-  color: white;
 
-  .intro {
-    padding-top: 100px;
-    height: 100%;
-    position: relative;
+  .hero {
+    height: max(100vh, 860px);
+    color: white;
 
-    .hello {
-      font-size: 200px;
-      font-family: Roboto-Bold;
-      text-transform: uppercase;
-      color: #ffffff18;
-      letter-spacing: -10px;
+    .intro {
+      padding-top: 100px;
+      height: 100%;
+      position: relative;
+
+      .hello {
+        font-size: 200px;
+        font-family: Roboto-Bold;
+        text-transform: uppercase;
+        color: #ffffff18;
+        letter-spacing: -10px;
+
+        .highlight-text {
+          color: var(--clr-main);
+        }
+      }
+    }
+
+    .about {
+      h2 {
+        font-size: 60px;
+        font-family: Roboto-Medium;
+      }
 
       .highlight-text {
         color: var(--clr-main);
+        margin-bottom: 50px;
+
+        &::after {
+          content: '';
+          display: block;
+          position: relative;
+          translate: 0 20px;
+          width: 160px;
+          height: 6px;
+          border-radius: 2em;
+          background-color: var(--clr-main);
+        }
+      }
+
+      .job-description {
+        width: 300px;
+        font-family: Roboto-Light;
+        font-size: 18px;
+        letter-spacing: .5px;
       }
     }
-  }
 
-  .about {
-    h2 {
-      font-size: 60px;
-      font-family: Roboto-Medium;
-    }
+    .follow-me {
+      position: absolute;
+      z-index: 10;
+      top: 100px;
+      right: 0;
+      gap: 20px;
 
-    .highlight-text {
-      color: var(--clr-main);
-      margin-bottom: 50px;
+      .title {
+        writing-mode: sideways-rl;
+      }
 
-      &::after {
-        content: '';
-        display: block;
-        position: relative;
-        translate: 0 20px;
-        width: 160px;
-        height: 6px;
+      .spacer {
+        width: 6px;
+        height: 80px;
         border-radius: 2em;
         background-color: var(--clr-main);
       }
-    }
 
-    .job-description {
-      width: 300px;
-      font-family: Roboto-Light;
-      font-size: 18px;
-      letter-spacing: .5px;
+      .svg-link {
+        font-size: 20px;
+      }
     }
   }
 
-  .follow-me {
+  .overflow-container {
     position: absolute;
-    z-index: 10;
-    top: 100px;
-    right: 0;
-    gap: 20px;
-
-    .title {
-      writing-mode: sideways-rl;
-    }
-
-    .spacer {
-      width: 6px;
-      height: 80px;
-      border-radius: 2em;
-      background-color: var(--clr-main);
-    }
-
-    .svg-link {
-      font-size: 20px;
-    }
-  }
-}
-
-.overflow-container {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  border-top: 1px solid var(--clr-main);
-  background-color: var(--clr-secondary);
-}
-
-.overflow {
-  align-items: center;
-  height: 350px;
-
-  .quote-container {
-    .author {
-      color: var(--clr-txt-secondary);
-      font-family: Roboto-Light;
-      font-weight: 300;
-      margin-bottom: 6px;
-    }
-
-    .quote {
-      color: var(--clr-txt-main);
-      font-family: Roboto-Slab;
-      font-weight: 600;
-    }
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    top: 650px;
+    border-top: 1px solid var(--clr-main);
+    background-color: var(--clr-secondary);
   }
 
-  .img-container {
-    position: relative;
-    translate: 0 -55%;
+  .overflow {
+    align-items: center;
+    height: 100%;
 
-    .hero-img {
-      width: 500px;
+    .quote-container {
+      .author {
+        color: var(--clr-txt-secondary);
+        font-family: Roboto-Light;
+        font-weight: 300;
+        margin-bottom: 6px;
+      }
+
+      .quote {
+        color: var(--clr-txt-main);
+        font-family: Roboto-Slab;
+        font-weight: 600;
+      }
     }
 
-    &::before {
-      content: '';
-      position: absolute;
-      display: block;
-      border-bottom-right-radius: 80px;
-      width: 300px;
-      height: 300px;
-      translate: 101px 60%;
-      box-shadow: 1px 1px 0px 0px var(--clr-main);
-      outline-offset: 40px;
-      outline: 1px solid var(--clr-main);
-      rotate: 45deg;
-      z-index: -1;
+    .img-container {
+      position: relative;
+      translate: 0 -55%;
+
+      .hero-img {
+        width: 500px;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        border-bottom-right-radius: 90px;
+        width: 300px;
+        height: 300px;
+        translate: 101px 60%;
+        box-shadow: 1px 1px 0px 0px var(--clr-main);
+        outline-offset: 40px;
+        outline: 1px solid var(--clr-main);
+        rotate: 45deg;
+        z-index: -1;
+      }
     }
   }
 }

@@ -1,32 +1,32 @@
-import { ReactComponent as AgamiLogo } from '../assets/img/or-agami-resized-logo.svg'
+import { GrGithub, GrLinkedinOption, GrTwitter } from 'react-icons/gr'
+import { MainLogo } from "../lib/main-logo"
 export const Footer = () => {
 
   return (
     <footer>
       <div className="main-layout full footer-container">
         <div className="main-layout flex space-around align-center footer">
-          <div className="col-md-4">
-            <a href="https://github.com/or-agami" target="_blank" rel="noreferrer">
-              <AgamiLogo />
-            </a>
+          <div className="social-network">
+            <h3>Find me on</h3>
+            <ul className="flex align-center links">
+              <li>
+                <a className="svg-link linkedin" href="https://linkedin.com/in/or-agami" target="_blank" rel="noreferrer" title="linkedin">
+                  <GrLinkedinOption />
+                </a>
+              </li>
+              <li>
+                <a className="svg-link github" href="https://github.com/or-agami" target="_blank" rel="noreferrer" title="github">
+                  <GrGithub />
+                </a>
+              </li>
+              <li>
+                <a className="svg-link twitter" href="https://twitter.com/or_agami" target="_blank" rel="noreferrer" title="twitter">
+                  <GrTwitter />
+                </a>
+              </li>
+            </ul>
           </div>
-          <ul className="flex space-between align-center">
-            <li className="">
-              <a href="https://github.com/or-agami" target="_blank" rel="noreferrer">
-                Github
-              </a>
-            </li>
-            <li className="">
-              <a href="https://facebook.com/profile.php?id=100008503151592" target="_blank" rel="noreferrer">
-                facebook
-              </a>
-            </li>
-            <li className="">
-              <a href="https://linkedin.com/in/or-agami-56567a206/" target="_blank" rel="noreferrer">
-                Linkedin
-              </a>
-            </li>
-          </ul>
+          <span className="copyright">Copyright (c) 2022 Or Agami</span>
         </div>
       </div>
     </footer>

@@ -3,7 +3,11 @@ import { skills, specialties } from "../data/skills.const";
 
 export const Specialties = () => {
 
-  const { ref, inView } = useInView({
+  const { ref: specialtiesRef, inView: specialtiesInView } = useInView({
+    threshold: .5,
+  })
+
+  const { ref: skillsRef, inView: skillsInView } = useInView({
     threshold: 1,
   })
 
@@ -11,7 +15,7 @@ export const Specialties = () => {
     <div className="main-layout full specialties-container" id="specialties">
       <section className="main-layout flex-column align-center specialties">
         <h1 className="main-title">specialties</h1>
-        <div className={`flex specialties-list ${inView ? 'visible' : 'invisible'}`} ref={ref}>
+        <div className={`flex specialties-list ${specialtiesInView ? 'visible' : 'invisible'}`} ref={specialtiesRef}>
           {specialties.map((specialty, idx) =>
             <article key={idx} className="flex-column justify-center align-center specialty">
               <div className="icon"><specialty.Icon /></div>
@@ -24,7 +28,7 @@ export const Specialties = () => {
             </article>
           )}
         </div>
-        <ul className={`flex-column skill-list ${inView ? 'visible' : 'invisible'}`}>
+        <ul className={`flex-column skill-list ${skillsInView ? 'visible' : 'invisible'}`} ref={skillsRef}>
           {skills.map((skill, idx) =>
             <li className="flex align-center skill" key={idx}>
               <h3 className="title">{skill.title}</h3>
@@ -37,10 +41,4 @@ export const Specialties = () => {
       </section>
     </div>
   )
-}
-
-const Skills = () => {
-  <section className="skills">
-
-  </section>
 }

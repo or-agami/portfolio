@@ -1,23 +1,46 @@
-.about-me-container {
-  background-color: white;
-}
+// .about-me-container {
+//   background-color: white;
+// }
 
 .about-me {
-  padding: 160px 40px;
-  gap: 40px;
+  gap: 60px;
+  padding-block-start: 90px;
+  padding-block-end: 120px;
 
-  .header {
-    text-align: center;
+  .main-title {
+    @include section-title
+  }
+
+  .content-container {
+    gap: 40px;
+    margin-bottom: 30px;
 
     .profile-img {
       width: 170px;
       border-radius: 50%;
     }
+
+    .description {
+      font-family: Roboto-Slab;
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--clr-txt-secondary);
+    }
   }
 
-  .about-description {
-    font-family: Roboto-Slab;
-    font-size: 20px;
-    color: rgb(58, 58, 58);
+  .software {
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 6px;
+
+    a {
+      height: 40px;
+    }
+
+
+    .white-bg img {
+      border-radius: 8px;
+      background-color: white;
+    }
   }
 }
