@@ -23,10 +23,9 @@ export const ProjectSwiper = () => {
         rewind={true}
         autoplay={{ pauseOnMouseEnter: true, disableOnInteraction: false }}
       >
-        {/* <ProjectPreviewTest project={projects[0]} /> */}
         {projects.map((project: Project) =>
-          <SwiperSlide>
-            <ProjectPreview key={project.id} project={project} />
+          <SwiperSlide key={project.id}>
+            <ProjectPreview project={project} />
           </SwiperSlide>
         )}
       </Swiper>
@@ -43,41 +42,41 @@ const ProjectPreview = ({ project }: { project: Project }) => {
   const [thumbnail, setThumbnail] = useState(project.thumbnail)
 
   const videoRef = useRef<HTMLVideoElement | null>(null)
+  const [isDescOpen, setDescOpen] = useState(false)
 
   useEffect(() => {
-    inView ? playVideo() : pauseVideo()
+    inView ? handleInView() : handleNotInView()
   }, [inView])
 
-  const playVideo = () => {
-    console.log('playVideo:', )
+  const handleInView = () => {
     if (videoRef.current) videoRef.current.play()
   }
 
-  const pauseVideo = () => {
-    console.log('pauseVideo:', )
+  const handleNotInView = () => {
+    if (isDescOpen) setDescOpen(false)
     if (videoRef.current) videoRef.current.pause()
   }
 
   const changeThumbnail = (snapshot: string) => {
-    console.log('snapshot:', snapshot)
     setThumbnail({ type: 'image', name: snapshot })
   }
 
   const setDefaultThumbnail = () => {
-    console.log('setDefaultThumbnail:',)
     setThumbnail(project.thumbnail)
-    setTimeout(playVideo, 100)
+    setTimeout(handleInView, 100)
   }
 
   return (
-    <article key={project.id} className="project-preview-test" ref={ref} onClick={playVideo}>
+    <article key={project.id} className="project-preview" ref={ref} onClick={handleInView}>
       <header className="flex align-center justify-center project-header">
-        <h1 className="title">{project.title} </h1>
+        <div className="title-container">
+          <h1 className="title">{project.title} </h1>
+          <h4 className="subtitle">{project.subtitle} </h4>
+        </div>
         <a className="url" href={project.url} target="_blank" rel="noreferrer"><BiLinkExternal /></a>
       </header>
       <div className="flex details">
         <div className="thumbnail">
-          {/* <img src={require(`../assets/img/portfolio/${project.id}-thumbnail.png`)} alt="" /> */}
           {thumbnail.type === 'video' ?
             <div className="phone-thumbnail">
               <video src={require(`../assets/video/${project.id}/${project.thumbnail.name}.mp4`)} loop ref={videoRef}></video>
@@ -88,21 +87,27 @@ const ProjectPreview = ({ project }: { project: Project }) => {
           }
         </div>
         <div className="flex-column info">
-          <div className="snapshots" onMouseLeave={() => setDefaultThumbnail()}>
-            {project.snapshots.map((snapshot, idx) =>
-              <img className={thumbnail.name === snapshot ? 'active' : ''} alt={snapshot} title={snapshot} key={idx}
-                src={require(`../assets/img/portfolio/${project.id}/${snapshot}.png`)}
-                onMouseEnter={() => changeThumbnail(snapshot)} />
-            )}
-          </div>
-          <h2 className="subtitle">{project.subtitle}</h2>
+          {isDescOpen ?
+            <div className="description">
+              <p>{project.desc}</p>
+            </div>
+            :
+            <div className="snapshots" onMouseLeave={() => setDefaultThumbnail()}>
+              {project.snapshots.map((snapshot, idx) =>
+                <img className={thumbnail.name === snapshot ? 'active' : ''} alt={snapshot} title={snapshot} key={idx}
+                  src={require(`../assets/img/portfolio/${project.id}/${snapshot}.png`)}
+                  onMouseEnter={() => changeThumbnail(snapshot)} />
+              )}
+            </div>}
+          <button className={`btn ${isDescOpen ? 'close' : 'read-more'}`} onClick={() => setDescOpen(!isDescOpen)}>
+            {isDescOpen ? 'Close' : 'Read More'}
+          </button>
           <h4 className="category">Category: <span>{project.category}</span></h4>
-          {/* <p className="description">{project.desc}</p> */}
           <ul className="flex tag-list">
             {project.tags.map((tag, idx) =>
               <li className="flex align-center tag" key={idx}>
                 <span className="icon"><AiFillTag /></span>
-                {tag}
+                <p>{tag}</p>
               </li>
             )}
           </ul>
@@ -111,33 +116,3 @@ const ProjectPreview = ({ project }: { project: Project }) => {
     </article>
   )
 }
-
-// const ProjectPreview = ({ project }: { project: Project }) => {
-
-//   return (
-//     <article key={project.id} className="project-preview">
-//       <header className="flex align-center justify-center project-header">
-//         <h1 className="title">{project.title} </h1>
-//         <a className="url" href={project.url} target="_blank" rel="noreferrer"><BiLinkExternal /></a>
-//       </header>
-//       <div className="flex details">
-//         <div className="thumbnail">
-//           <img src={require(`../assets/img/portfolio/${project.id}-thumbnail.png`)} alt="" />
-//         </div>
-//         <div className="flex-column info">
-//           <h2 className="subtitle">{project.subtitle}</h2>
-//           <h4 className="category">Category: <span>{project.category}</span></h4>
-//           {/* <p className="description">{project.desc}</p> */}
-//           <ul className="flex tag-list">
-//             {project.tags.map((tag, idx) =>
-//               <li className="flex align-center tag" key={idx}>
-//                 <span className="icon"><AiFillTag /></span>
-//                 {tag}
-//               </li>
-//             )}
-//           </ul>
-//         </div>
-//       </div>
-//     </article>
-//   )
-// }
