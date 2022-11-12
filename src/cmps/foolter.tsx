@@ -1,5 +1,5 @@
 import { GrGithub, GrLinkedinOption, GrTwitter } from 'react-icons/gr'
-import { MainLogo } from "../lib/main-logo"
+
 export const Footer = () => {
 
   return (

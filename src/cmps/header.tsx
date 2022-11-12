@@ -31,7 +31,7 @@ export const Header = () => {
         <nav className="flex justify-center align-center nav-btns">
           <Link className="nav-link" activeClass="active" offset={-60} smooth spy hashSpy to="specialties">Specialties</Link>
           <Link className="nav-link" activeClass="active" offset={-60} smooth spy hashSpy to="portfolio">Portfolio</Link>
-          <Link className="nav-link" activeClass="active" offset={-328} smooth spy hashSpy to="about-me">Me</Link>
+          <Link className="nav-link" activeClass="active" offset={-60} smooth spy hashSpy to="about-me">Me</Link>
           {/* <Link className="nav-link" activeClass="active" offset={-68} smooth spy onSetActive={handleActive} to="specialties">Specialties</Link>
           <Link className="nav-link" activeClass="active" offset={-68} smooth spy onSetActive={handleActive} to="portfolio">Portfolio</Link>
           <Link className="nav-link" activeClass="active" offset={-68} smooth spy onSetActive={handleActive} to="about-me">Me</Link> */}

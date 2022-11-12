@@ -1,4 +1,10 @@
+import { useInView } from "react-intersection-observer"
+
 export const AboutMe = () => {
+
+  const { ref, inView } = useInView({
+    threshold: 1,
+  })
 
   return (
     <div className="main-layout full about-me-container" id="about-me">
@@ -13,7 +19,7 @@ export const AboutMe = () => {
             Other interest include development of hardware and software for efficient and ergonomic workspace.
           </p>
         </div>
-        <div className="flex align-center justify-center software">
+        <div className={`flex align-center justify-center software ${inView ? 'visible' : 'invisible'}`} ref={ref}>
           <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer" title="HTML">
             <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40" />
           </a>

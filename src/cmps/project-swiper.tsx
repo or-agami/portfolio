@@ -14,7 +14,6 @@ export const ProjectSwiper = () => {
 
   return (
     <div className="project-swiper">
-      {/* <Swiper modules={[Navigation, Pagination, Scrollbar, A11y]} */}
       <Swiper modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={50}
         slidesPerView={1}
@@ -46,7 +45,7 @@ const ProjectPreview = ({ project }: { project: Project }) => {
 
   useEffect(() => {
     inView ? handleInView() : handleNotInView()
-  }, [inView])
+  })
 
   const handleInView = () => {
     if (videoRef.current) videoRef.current.play()
