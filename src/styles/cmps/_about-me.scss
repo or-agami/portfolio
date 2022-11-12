@@ -1,7 +1,3 @@
-// .about-me-container {
-//   background-color: white;
-// }
-
 .about-me {
   gap: 90px;
   padding-block-start: 120px;
@@ -48,7 +44,6 @@
 
       @for $i from 1 through 21 {
         a:nth-child(#{$i}) {
-          // transition-delay: calc(0.4s + ($i - 1) * .6s);
           transition-delay: calc(($i - 1) * .08s);
         }
       }

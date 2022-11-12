@@ -6,9 +6,8 @@
   transition: background-color .2s ease-out;
 
   &.scroll {
-    // background-color: var(--clr-gray);
     background-color: lighten($clr-secondary, 4);
-    box-shadow: 0px 0px 16px 6px rgba(0,0,0,0.52);
+    box-shadow: 0px 0px 16px 6px rgba(0, 0, 0, 0.52);
   }
 }
 
@@ -17,7 +16,6 @@
   transition: padding .3s ease-out;
 
   &.scroll {
-    // padding: 10px 25px;
     padding: 10px 15px;
 
     .svg-icon #right * {
@@ -54,10 +52,5 @@
     &.active {
       color: var(--clr-main);
     }
-
   }
-
-  // .nav-link:not(:last-child) {
-  //   margin-inline-end: 10px;
-  // }
 }

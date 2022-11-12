@@ -44,22 +44,6 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-      {/* 
-      <div className="main-layout full overflow-container">
-        <div className="main-layout flex overflow">
-          <div className="quote-container">
-            <h4 className="author">
-              Steve Jobs, co-founder of Apple, Inc.
-            </h4>
-            <h4 className="quote">
-              "Design is not just what it looks like and feels like. Design is how it works."
-            </h4>
-          </div>
-          <div className="img-container">
-            <img className="hero-img" src={require('../assets/img/hero-img.png')} alt="" />
-          </div>
-        </div>
-      </div> */}
     </>
   )
 }

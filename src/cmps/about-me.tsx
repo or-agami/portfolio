@@ -12,8 +12,6 @@ export const AboutMe = () => {
         <h1 className="main-title">about me</h1>
         <div className="flex align-center content-container">
           <img className="profile-img" src={require('../assets/img/or-agami.jpg')} alt="Profile" />
-          {/* <h4>Or Agami</h4>
-            <p className="text-muted">Full-Stack Developer</p> */}
           <p className="description">
             Hey, I am an Full Stack developer. My focus is mainly on feature rich apps, responsive and minimalist web design with amazing UX,
             Other interest include development of hardware and software for efficient and ergonomic workspace.
