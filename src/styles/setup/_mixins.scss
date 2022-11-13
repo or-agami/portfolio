@@ -1,24 +1,24 @@
 //? Media Queries Breakpoint
 
-@mixin for-mobile-layout {
+@mixin for-mobile-layout { // 830px
   @media (max-width: $break-narrow) {
     @content;
   }
 }
 
-@mixin for-narrow-layout {
+@mixin for-narrow-layout { // 830px
   @media (min-width: $break-narrow) {
     @content;
   }
 }
 
-@mixin for-normal-layout {
+@mixin for-normal-layout { // 1070px
   @media (min-width: $break-normal) {
     @content;
   }
 }
 
-@mixin for-wide-layout {
+@mixin for-wide-layout { // 1180px
   @media (min-width: $break-wide) {
     @content;
   }

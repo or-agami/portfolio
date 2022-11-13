@@ -14,13 +14,14 @@ export const ProjectSwiper = () => {
 
   return (
     <div className="project-swiper">
+      {/* <Swiper modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]} */}
       <Swiper modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={50}
         slidesPerView={1}
         navigation
         pagination={{ clickable: true }}
         rewind={true}
-        autoplay={{ pauseOnMouseEnter: true, disableOnInteraction: false }}
+      // autoplay={{ pauseOnMouseEnter: true, disableOnInteraction: false }}
       >
         {projects.map((project: Project) =>
           <SwiperSlide key={project.id}>
@@ -35,18 +36,18 @@ export const ProjectSwiper = () => {
 const ProjectPreview = ({ project }: { project: Project }) => {
 
   const { ref, inView } = useInView({
-    threshold: 1,
+    threshold: 0.2,
   })
 
   const [thumbnail, setThumbnail] = useState(project.thumbnail)
 
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const [isDescOpen, setDescOpen] = useState(false)
-
+  const windowWidth = (window.innerWidth > 0) ? window.innerWidth : window.screen.width;
   useEffect(() => {
+    // if (windowWidth < 834) return
     inView ? handleInView() : handleNotInView()
   })
-
   const handleInView = () => {
     if (videoRef.current) videoRef.current.play()
   }
@@ -56,8 +57,12 @@ const ProjectPreview = ({ project }: { project: Project }) => {
     if (videoRef.current) videoRef.current.pause()
   }
 
-  const changeThumbnail = (snapshot: string) => {
-    setThumbnail({ type: 'image', name: snapshot })
+  const changeThumbnail = (snapshot: string, ev?: React.MouseEvent<HTMLImageElement, MouseEvent>) => {
+    if (ev) {
+      ev.stopPropagation()
+      ev.preventDefault()
+    }
+    setTimeout(() => setThumbnail({ type: 'image', name: snapshot }), 100)
   }
 
   const setDefaultThumbnail = () => {
@@ -65,8 +70,19 @@ const ProjectPreview = ({ project }: { project: Project }) => {
     setTimeout(handleInView, 100)
   }
 
+  const toggleDescription = (ev: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    if (ev) {
+      ev.stopPropagation()
+      ev.preventDefault()
+    }
+    console.log('isDescOpen in Function:', isDescOpen)
+    setDescOpen(!isDescOpen)
+    // setTimeout(() => setDescOpen(!isDescOpen), 100)
+  }
+
   return (
-    <article key={project.id} className="project-preview" ref={ref} onClick={handleInView}>
+    // <article key={project.id} className="project-preview" ref={ref} onClick={handleInView}>
+    <article key={project.id} className="project-preview" ref={ref} onClick={setDefaultThumbnail}>
       <header className="flex align-center justify-center project-header">
         <div className="title-container">
           <h1 className="title">{project.title} </h1>
@@ -91,14 +107,14 @@ const ProjectPreview = ({ project }: { project: Project }) => {
               <p>{project.desc}</p>
             </div>
             :
-            <div className="snapshots" onMouseLeave={() => setDefaultThumbnail()}>
+            <div className="snapshots">
               {project.snapshots.map((snapshot, idx) =>
                 <img className={thumbnail.name === snapshot ? 'active' : ''} alt={snapshot} title={snapshot} key={idx}
                   src={require(`../assets/img/portfolio/${project.id}/${snapshot}.png`)}
-                  onMouseEnter={() => changeThumbnail(snapshot)} />
+                  onMouseEnter={(ev) => changeThumbnail(snapshot, ev)} onClick={(ev) => changeThumbnail(snapshot, ev)} />
               )}
             </div>}
-          <button className={`btn ${isDescOpen ? 'close' : 'read-more'}`} onClick={() => setDescOpen(!isDescOpen)}>
+          <button className={`btn ${isDescOpen ? 'close' : 'read-more'}`} onClick={toggleDescription}>
             {isDescOpen ? 'Close' : 'Read More'}
           </button>
           <h4 className="category">Category: <span>{project.category}</span></h4>

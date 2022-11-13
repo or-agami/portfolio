@@ -8,7 +8,9 @@
 .specialties {
   padding-block-start: 90px;
   padding-block-end: 120px;
-
+  @include for-mobile-layout {
+    padding-block-end: 60px;
+  }
   .main-title {
     @include section-title;
     margin-bottom: 80px;
@@ -19,16 +21,40 @@
     justify-content: space-evenly;
     margin-bottom: 60px;
 
+    @include for-mobile-layout {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+
     .specialty {
       text-align: center;
       position: relative;
+      width: 200px;
       aspect-ratio: 1;
-      width: 250px;
       border-radius: 2em;
       background-color: var(--clr-secondary);
 
+      @include for-mobile-layout {
+        &:nth-child(2n) {
+          margin-inline-start: 35%;
+        }
+        
+        &:nth-child(2n - 1) {
+          margin-inline-end: 35%;
+        }
+      }
+
+      @include for-normal-layout {
+        width: 250px;
+      }
+
       .icon {
-        font-size: 80px;
+        font-size: 50px;
+
+        @include for-normal-layout {
+          font-size: 80px;
+        }
 
         svg * {
           fill: var(--clr-main);

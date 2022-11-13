@@ -18,11 +18,13 @@ $clr-txt-secondary: #a8a8a8;
 
 //? Layout
 $layoutPadding: 20px;
+$layoutPaddingMobile: 10px;
 
 //? Layout Breakpoints
-$break-narrow: 1200px;
-$break-normal: 1360px;
-$break-wide: 1920px;
+$break-narrow: 830px;
+// $break-mid: 950px;
+$break-normal: 1070px;
+$break-wide: 1180px;
 
 $padded-break-narrow: $break-narrow + $layoutPadding * 2;
 $padded-break-normal: $break-normal + $layoutPadding * 2;

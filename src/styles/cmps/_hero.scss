@@ -15,22 +15,44 @@
       position: relative;
 
       .hello {
-        font-size: 200px;
+        font-size: 120px;
         font-family: Roboto-Bold;
         text-transform: uppercase;
         color: #ffffff18;
-        letter-spacing: -10px;
+        letter-spacing: -7px;
 
         .highlight-text {
           color: var(--clr-main);
+        }
+
+        @include for-mobile-layout {
+          letter-spacing: -4px;
+          font-size: 90px;
+        }
+
+        @include for-narrow-layout {
+          letter-spacing: -10px;
+          font-size: 160px;
+        }
+
+        @include for-normal-layout {
+          font-size: 200px;
         }
       }
     }
 
     .about {
       h2 {
-        font-size: 60px;
+        font-size: 40px;
         font-family: Roboto-Medium;
+
+        @include for-mobile-layout {
+          font-size: 32px;
+        }
+
+        @include for-narrow-layout {
+          font-size: 60px;
+        }
       }
 
       .highlight-text {
@@ -52,8 +74,12 @@
       .job-description {
         width: 300px;
         font-family: Roboto-Light;
-        font-size: 18px;
+        font-size: 16px;
         letter-spacing: .5px;
+
+        @include for-narrow-layout {
+          font-size: 18px;
+        }
       }
     }
 
@@ -63,6 +89,10 @@
       top: 100px;
       right: 0;
       gap: 20px;
+
+      @include for-mobile-layout {
+        right: -5px;
+      }
 
       .title {
         writing-mode: vertical-rl;
@@ -92,10 +122,19 @@
   }
 
   .overflow {
+    position: relative;
     align-items: center;
     height: 100%;
 
+    @include for-mobile-layout {
+      flex-direction: column-reverse;
+    }
+
     .quote-container {
+      @include for-mobile-layout {
+        padding-bottom: 20px;
+      }
+
       .author {
         color: var(--clr-txt-secondary);
         font-family: Roboto-Light;
@@ -112,10 +151,25 @@
 
     .img-container {
       position: relative;
-      translate: 0 -55%;
+      translate: 0 -40%;
+
+      @include for-mobile-layout {
+        position: absolute;
+        translate: 0 -50%;
+      }
+
+      @include for-normal-layout {
+        position: absolute;
+        right: 42px;
+        translate: 0 -55%;
+      }
 
       .hero-img {
         width: 500px;
+
+        @include for-mobile-layout {
+          width: 300px;
+        }
       }
 
       &::before {
@@ -131,6 +185,13 @@
         outline: 1px solid var(--clr-main);
         rotate: 45deg;
         z-index: -1;
+
+        @include for-mobile-layout {
+          width: 200px;
+          height: 200px;
+          translate: 50px 50%;
+          border-bottom-right-radius: 60px;
+        }
       }
     }
   }

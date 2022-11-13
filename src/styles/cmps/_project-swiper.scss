@@ -2,6 +2,21 @@
   background-color: rgba(63, 63, 63, 0.171);
   padding: 20px 10px;
   border-radius: 30px;
+  max-width: 980px;
+  margin-inline: auto;
+
+  @include for-mobile-layout {
+    max-width: 100%;
+    // max-width: fit-content;
+  }
+
+  @include for-narrow-layout {
+    max-width: 740px;
+  }
+
+  @include for-normal-layout {
+    max-width: 980px;
+  }
 
   .swiper-button-prev,
   .swiper-button-next {
@@ -18,6 +33,12 @@
   padding: 50px;
   padding-top: 0;
 
+  @include for-mobile-layout {
+    width: fit-content;
+    margin-inline: auto;
+    padding-inline: 0;
+  }
+
   .project-header {
     text-align: center;
     width: 100%;
@@ -26,31 +47,70 @@
     .title {
       font-size: 48px;
       flex: 1;
+
+      @include for-mobile-layout {
+        font-size: 32px;
+      }
+    }
+
+    .subtitle {
+      @include for-mobile-layout {
+        font-weight: 400;
+        font-family: Roboto;
+        color: var(--clr-txt-secondary);
+      }
     }
 
     .url {
       font-size: 40px;
       color: var(--clr-main);
+
+      @include for-mobile-layout {
+        font-size: 26px;
+        translate: 20px -5px;
+      }
     }
   }
 
   .details {
     gap: 40px;
+    flex-direction: column;
+    align-items: center;
+
+    @include for-normal-layout {
+      flex-direction: row;
+    }
 
     .thumbnail {
       width: 540px;
 
+      @include for-mobile-layout {
+        width: 100%;
+        height: 439px;
+      }
+
       .img-thumbnail {
-        width: 540px;
-        height: 435px;
+        object-fit: contain;
+        width: 100%;
+        height: 100%;
+
+        @include for-narrow-layout {
+          width: 540px;
+          height: 435px;
+        }
+
       }
 
       .phone-thumbnail {
         position: relative;
         display: grid;
         place-items: center;
-        width: 540px;
+        // width: 540px;
         height: 439px;
+
+        @include for-narrow-layout {
+          width: 540px;
+        }
 
         img {
           width: 200px;
