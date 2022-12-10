@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.e869d95f.css",
+    "main.css": "/static/css/main.0f08b142.css",
     "main.js": "/static/js/main.f70d596f.js",
     "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
     "static/media/meme-generator-mobile.mp4": "/static/media/meme-generator-mobile.6c2ad77ac95b11485037.mp4",
@@ -48,12 +48,12 @@
     "static/media/specialties-bg.png": "/static/media/specialties-bg.0bbbacc5b5eb9202170f.png",
     "index.html": "/index.html",
     "static/media/agami-logo.svg": "/static/media/agami-logo.58396eed2fcd9e5c48dcd1385f63ebcb.svg",
-    "main.e869d95f.css.map": "/static/css/main.e869d95f.css.map",
+    "main.0f08b142.css.map": "/static/css/main.0f08b142.css.map",
     "main.f70d596f.js.map": "/static/js/main.f70d596f.js.map",
     "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e869d95f.css",
+    "static/css/main.0f08b142.css",
     "static/js/main.f70d596f.js"
   ]
 }
