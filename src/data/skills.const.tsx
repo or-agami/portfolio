@@ -34,24 +34,24 @@ interface Skill {
 export const skills: Skill[] = [
   {
     title: 'JavaScript',
-    score: 7
+    score: 9
   },
   {
     title: 'React',
-    score: 6
+    score: 8
   },
   {
     title: 'Svelte',
-    score: 4
+    score: 7
   },
-  {
-    title: 'Angular',
-    score: 3
-  },
-  {
-    title: 'Vue',
-    score: 5
-  },
+  // {
+  //   title: 'Angular',
+  //   score: 5
+  // },
+  // {
+  //   title: 'Vue',
+  //   score: 6
+  // },
   // {
   //   title: 'HTML & CSS/SASS',
   //   score: 7
@@ -62,10 +62,10 @@ export const skills: Skill[] = [
   // },
   {
     title: 'MongoDB',
-    score: 6
+    score: 7
   },
-  // {
-  //   title: 'Git',
-  //   score: 6
-  // },
+  {
+    title: 'Git',
+    score: 8
+  },
 ]
