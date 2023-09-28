@@ -43,7 +43,7 @@ const ProjectPreview = ({ project }: { project: Project }) => {
 
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const [isDescOpen, setDescOpen] = useState(false)
-  const windowWidth = (window.innerWidth > 0) ? window.innerWidth : window.screen.width;
+  // const windowWidth = (window.innerWidth > 0) ? window.innerWidth : window.screen.width;
   useEffect(() => {
     // if (windowWidth < 834) return
     inView ? handleInView() : handleNotInView()
