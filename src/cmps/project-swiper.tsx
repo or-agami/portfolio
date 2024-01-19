@@ -94,7 +94,7 @@ const ProjectPreview = ({ project }: { project: Project }) => {
         <div className="thumbnail">
           {thumbnail.type === 'video' ?
             <div className="phone-thumbnail">
-              <video playsInline src={require(`../assets/video/${project.id}/${project.thumbnail.name}.mp4`)} loop ref={videoRef}></video>
+              <video playsInline controls src={require(`../assets/video/${project.id}/${project.thumbnail.name}.mp4`)} loop ref={videoRef}></video>
               <img src={require(`../assets/img/iPhone-14-frame.png`)} alt="" />
             </div>
             : thumbnail.type === 'image' &&
