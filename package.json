@@ -31,7 +31,7 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^6.1.1"
   },
   "dependencies": {
     "@emailjs/browser": "^3.9.1",
