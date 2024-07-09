@@ -26,7 +26,7 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
-          <span className="copyright">Copyright (c) 2023 Or Agami</span>
+          <span className="copyright">Copyright (c) 2024 Or Agami</span>
         </div>
       </div>
     </footer>
